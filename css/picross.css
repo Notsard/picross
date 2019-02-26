@@ -5,15 +5,10 @@ h1, p {
 color: aliceblue;
 }
 
-#canva {
-    width: 600px;
-    height: 400px;
-    border: 1px solid #333;
-    margin: 0 auto;
-    background: #FFF;
-    text-align: center;
-
-}
+canvas {
+    border:2px solid #999;
+    background-color:#fff;
+  }
 
 .bandeau {
     background-color: darkblue;
