@@ -4,6 +4,7 @@ const SQUARE_WIDTH = 50;
 const SQUARE_HEIGHT = 50;
 const SQUARE_MARGIN = 2;
 const SQUARE_COLORS = ["blue"];
+const SQUARE_CLICK = ["black"];
 
 
 
@@ -41,7 +42,6 @@ function squaresInit() {
           squareArray[i][j] = 1;
       }
   }
-  
 }
 
 function squaresDisplay(ctx) {
@@ -59,14 +59,29 @@ function squaresDisplay(ctx) {
           }
       }
   }
-  
 }
+function gridClick(event){
+    // on récupère le canva
+    elem = getCanva();
+
+    // On récupère les coordonnées du canva
+    var rect = elem.getBoundingClientRect();
 
 
+    // Les coordonnées de l'event - les coordonnées du canvas
+    // On divise par la taille du carré
+    console.log(parseInt((event.clientX - rect.left) / SQUARE_WIDTH) * SQUARE_WIDTH);
+    console.log(parseInt((event.clientY - rect.left)/ SQUARE_WIDTH)* SQUARE_WIDTH);
+    // ctx.setFillColor = "#000000";
+}
 
 window.addEventListener('load', function () {
   //
   context = getContext();
+
+  elem = getCanva();
+
+  elem.addEventListener('click', gridClick);
  
 
   //
@@ -76,6 +91,6 @@ window.addEventListener('load', function () {
   squaresDisplay(context);
 
   //
- 
+
 
 }, );
