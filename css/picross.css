@@ -1,6 +1,5 @@
 
 
-
 h1, p {
 color: aliceblue;
 }
@@ -8,9 +7,18 @@ color: aliceblue;
 canvas {
     border:2px solid #999;
     background-color:darkblue;
+    display: block;
+    text-align: center;
   }
 
-.bandeau {
+.bandeau  {
     background-color: #4682B4;
+    
 }
+ footer {
+  background-color: #4682B4;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ }
 

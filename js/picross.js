@@ -1,8 +1,8 @@
-const LINE_NUMBER = 10;
-const SQUARE_PER_LINE = 10;
+const LINE_NUMBER = 6;
+const SQUARE_PER_LINE = 6;
 const SQUARE_WIDTH = 50;
 const SQUARE_HEIGHT = 50;
-const SQUARE_MARGIN = 2;
+const SQUARE_MARGIN = 1;
 const SQUARE_COLORS = ["blue"];
 const SQUARE_CLICK = ["black"];
 
@@ -75,6 +75,22 @@ function gridClick(event){
     // ctx.setFillColor = "#000000";
 }
 
+function squareText(ctx) {
+    ctx.font = "25px Arial";
+    ctx.strokeText('1', 25,100);
+    ctx.strokeText('2', 25,150);
+    ctx.strokeText('2', 25,200);
+    ctx.strokeText('3', 25,250);
+    ctx.strokeText('2', 25,300);
+    ctx.strokeText('0', 75,25);
+    ctx.strokeText('1', 125,25);
+    ctx.strokeText('5', 175,25);
+    ctx.strokeText('4', 225,25);
+    ctx.strokeText('0', 275,25);
+
+}
+
+
 window.addEventListener('load', function () {
   //
   context = getContext();
@@ -91,6 +107,6 @@ window.addEventListener('load', function () {
   squaresDisplay(context);
 
   //
-
+squareText(context);
 
 }, );
