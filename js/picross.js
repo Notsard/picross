@@ -5,6 +5,11 @@ const SQUARE_HEIGHT = 50;
 const SQUARE_MARGIN = 1;
 const SQUARE_COLORS = ["blue"];
 const SQUARE_CLICK = ["black"];
+const ROWS = [[1],[2],[2],[3],[2]];
+const COLUMNS = [[0],[1],[5],[4],[0]];
+const TEXT_COL = [50, 100, 150, 200, 250];
+const TEXT_ROW = [100, 150, 200, 250, 300];
+
 
 
 
@@ -75,20 +80,26 @@ function gridClick(event){
     // ctx.setFillColor = "#000000";
 }
 
-function squareText(ctx) {
+function rowText(ctx) {
+   for (var i=0; i<5; i++) {
+   
     ctx.font = "25px Arial";
-    ctx.strokeText('1', 25,100);
-    ctx.strokeText('2', 25,150);
-    ctx.strokeText('2', 25,200);
-    ctx.strokeText('3', 25,250);
-    ctx.strokeText('2', 25,300);
-    ctx.strokeText('0', 75,25);
-    ctx.strokeText('1', 125,25);
-    ctx.strokeText('5', 175,25);
-    ctx.strokeText('4', 225,25);
-    ctx.strokeText('0', 275,25);
+    ctx.fillStyle = 'white';
+    ctx.fillText(ROWS[i], 0, TEXT_ROW[i] ); 
+}
 
 }
+
+function colText(ctx) {
+    for (var i=0; i<7; i++) {
+    
+     ctx.font = "25px Arial";
+     ctx.fillStyle = 'white';
+     ctx.fillText(COLUMNS[i], TEXT_COL[i] +(SQUARE_MARGIN + i), SQUARE_HEIGHT); 
+ }
+ 
+ }
+
 
 
 window.addEventListener('load', function () {
@@ -107,6 +118,8 @@ window.addEventListener('load', function () {
   squaresDisplay(context);
 
   //
-squareText(context);
+rowText(context);
+
+colText(context);
 
 }, );
