@@ -75,10 +75,22 @@ function gridClick(event){
 
     // Les coordonnées de l'event - les coordonnées du canvas
     // On divise par la taille du carré
-    console.log(parseInt((event.clientX - rect.left) / SQUARE_WIDTH) * SQUARE_WIDTH);
-    console.log(parseInt((event.clientY - rect.left)/ SQUARE_WIDTH)* SQUARE_WIDTH);
-    // ctx.setFillColor = "#000000";
-}
+    x = parseInt((event.clientX - rect.left) / SQUARE_WIDTH) * SQUARE_WIDTH;
+    y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT)* SQUARE_HEIGHT;
+    var canvas = document.getElementById("canvasElem");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "black";
+    ctx.fillRect(x, y, 50, 50);
+    }
+// function showCoords(event) {
+//     var x = event.offsetX/50 ;
+//     var y = event.offsetY/50 ; 
+//     var coinx = Math.floor(x);
+//     var coiny = Math.floor(y);
+//     ctx.fillStyle = 'red';
+//     ctx.fillRect (coinx50 ,coiny50, 50, 50);
+//     document.oncontextmenu = new Function("return false");
+// }
 
 function rowText(ctx) {
    for (var i=0; i<5; i++) {
@@ -107,9 +119,7 @@ window.addEventListener('load', function () {
   context = getContext();
 
   elem = getCanva();
-
   elem.addEventListener('click', gridClick);
- 
 
   //
   squaresInit(context);
