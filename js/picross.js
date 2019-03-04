@@ -79,18 +79,15 @@ function gridClick(event){
     y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT)* SQUARE_HEIGHT;
     var canvas = document.getElementById("canvasElem");
     var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "black";
-    ctx.fillRect(x, y, 50, 50);
+    if (x==0 || y==0) {
+        return;
     }
-// function showCoords(event) {
-//     var x = event.offsetX/50 ;
-//     var y = event.offsetY/50 ; 
-//     var coinx = Math.floor(x);
-//     var coiny = Math.floor(y);
-//     ctx.fillStyle = 'red';
-//     ctx.fillRect (coinx50 ,coiny50, 50, 50);
-//     document.oncontextmenu = new Function("return false");
-// }
+    else{
+        ctx.fillStyle = "black";
+         ctx.fillRect(x, y, 50, 50);
+    
+    }
+    }
 
 function rowText(ctx) {
    for (var i=0; i<5; i++) {
