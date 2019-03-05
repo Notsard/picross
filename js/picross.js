@@ -65,7 +65,7 @@ function squaresDisplay(ctx) {
       }
   }
 }
-function gridClick(event){
+function leftClick(event){
     // on récupère le canva
     elem = getCanva();
 
@@ -75,8 +75,8 @@ function gridClick(event){
 
     // Les coordonnées de l'event - les coordonnées du canvas
     // On divise par la taille du carré
-    x = parseInt((event.clientX - rect.left) / SQUARE_WIDTH) * SQUARE_WIDTH;
-    y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT)* SQUARE_HEIGHT;
+    x = parseInt((event.clientX - rect.left) / SQUARE_WIDTH) * SQUARE_WIDTH + SQUARE_MARGIN;
+    y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT)* SQUARE_HEIGHT + SQUARE_MARGIN;
     var canvas = document.getElementById("canvasElem");
     var ctx = canvas.getContext("2d");
     if (x==0 || y==0) {
@@ -88,6 +88,30 @@ function gridClick(event){
     
     }
     }
+
+    function rightClick(event) {
+        elem = getCanva();
+
+        // On récupère les coordonnées du canva
+        var rect = elem.getBoundingClientRect();
+    
+    
+        // Les coordonnées de l'event - les coordonnées du canvas
+        // On divise par la taille du carré
+        x = parseInt((event.clientX - rect.left) / SQUARE_WIDTH ) * SQUARE_WIDTH;
+        y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT )* SQUARE_HEIGHT;
+        var canvas = document.getElementById("canvasElem");
+        var ctx = canvas.getContext("2d");
+        if (x==0 || y==0) {
+            return;
+        }
+        else{
+            ctx.fillStyle = "blue";
+             ctx.fillRect(x, y, 50, 50);
+        
+        }
+        };
+    
 
 function rowText(ctx) {
    for (var i=0; i<5; i++) {
@@ -110,13 +134,16 @@ function colText(ctx) {
  }
 
 
+ document.oncontextmenu = new Function("return false");
 
 window.addEventListener('load', function () {
   //
   context = getContext();
 
   elem = getCanva();
-  elem.addEventListener('click', gridClick);
+  elem.addEventListener('click', leftClick);
+  elem.addEventListener("contextmenu", rightClick);
+
 
   //
   squaresInit(context);
