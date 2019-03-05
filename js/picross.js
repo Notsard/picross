@@ -75,8 +75,8 @@ function leftClick(event){
 
     // Les coordonnées de l'event - les coordonnées du canvas
     // On divise par la taille du carré
-    x = parseInt((event.clientX - rect.left) / SQUARE_WIDTH) * SQUARE_WIDTH + SQUARE_MARGIN;
-    y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT)* SQUARE_HEIGHT + SQUARE_MARGIN;
+    x = parseInt((event.clientX - rect.left) / (SQUARE_WIDTH + SQUARE_MARGIN ) ) * (SQUARE_WIDTH + SQUARE_MARGIN);
+    y = parseInt((event.clientY - rect.top)/ (SQUARE_HEIGHT + SQUARE_MARGIN) ) * (SQUARE_HEIGHT + SQUARE_MARGIN);
     var canvas = document.getElementById("canvasElem");
     var ctx = canvas.getContext("2d");
     if (x==0 || y==0) {
@@ -84,7 +84,7 @@ function leftClick(event){
     }
     else{
         ctx.fillStyle = "black";
-         ctx.fillRect(x, y, 50, 50);
+         ctx.fillRect(x/SQUARE_MARGIN, y/SQUARE_MARGIN, 50, 50);
     
     }
     }
@@ -98,8 +98,8 @@ function leftClick(event){
     
         // Les coordonnées de l'event - les coordonnées du canvas
         // On divise par la taille du carré
-        x = parseInt((event.clientX - rect.left) / SQUARE_WIDTH ) * SQUARE_WIDTH;
-        y = parseInt((event.clientY - rect.top)/ SQUARE_HEIGHT )* SQUARE_HEIGHT;
+        x = parseInt((event.clientX - rect.left) / (SQUARE_WIDTH + SQUARE_MARGIN ) ) * (SQUARE_WIDTH + SQUARE_MARGIN);
+        y = parseInt((event.clientY - rect.top)/ (SQUARE_HEIGHT + SQUARE_MARGIN) ) * (SQUARE_HEIGHT + SQUARE_MARGIN);
         var canvas = document.getElementById("canvasElem");
         var ctx = canvas.getContext("2d");
         if (x==0 || y==0) {
