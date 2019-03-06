@@ -9,16 +9,17 @@ const ROWS = [[1],[2],[2],[3],[2]];
 const COLUMNS = [[0],[1],[5],[4],[0]];
 const TEXT_COL = [50, 100, 150, 200, 250];
 const TEXT_ROW = [100, 150, 200, 250, 300];
+var tabl = [];
+tabl[1]=[50,50];
+tabl[2]=[100,50];
+tabl[3]=[150,50];
+tabl[4]=[200,50];
+tabl[5]=[250,50];
 
-
-
-
-function getCanva()
-{
+function getCanva(){
     return document.getElementById('canvasElem');
 }
 
-//
 function getContext() {
     //
     var elem = getCanva();
@@ -110,8 +111,17 @@ function leftClick(event){
              ctx.fillRect(x, y, 50, 50);
         
         }
-        };
-    
+        }
+        function juste(){
+            // var arg1 = alert("Test");
+            // var arg2 = alert("Test2");
+            for (var i = 0; i < tabl.length; i++) {
+                if (tabl== [3]){
+                    alert("Victoire");
+                }
+        }
+    }
+
 
 function rowText(ctx) {
    for (var i=0; i<5; i++) {
