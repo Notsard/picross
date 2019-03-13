@@ -114,10 +114,6 @@ function leftClick(event) {
      tableauCanvas [row][col] = 1;
 
     console.log(tableauCanvas);
-    // tableauCanvas[1][2] = 1;
-    // tableauCanvas[1][3] = 1;
-    // tableauCanvas[2][2][3][4] = 1;
-    // tableauCanvas[3][3][4] = 1;
 }
 
 function rightClick(event) {
@@ -148,13 +144,13 @@ function rightClick(event) {
 }
 
 function juste() {
-   if(tableauCanvas.join() == tabl){
+   if(tableauCanvas.join() == tabl.join()){
        alert("C'est gagné");
    }else{
        alert("dommage c'est perdu");
    }
 }
-
+nvas [row][col] = 0;
 
 function rowText(ctx) {
     for (var i = 0; i < 5; i++) {
@@ -177,7 +173,7 @@ function colText(ctx) {
 }
 
 
-document.oncontextmenu = new Function("return false");
+document.oncontextmenu = new Function("return false");nvas [row][col] = 0;
 
 window.addEventListener('load', function () {
     //
