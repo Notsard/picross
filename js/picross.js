@@ -108,10 +108,16 @@ function leftClick(event) {
         ctx.fillRect(x / SQUARE_MARGIN, y / SQUARE_MARGIN, 50, 50);
 
     }
-    tableauCanvas[0][3] = 1;
-    tableauCanvas[1][3][4] = 1;
-    tableauCanvas[2][2][3][4] = 1;
-    tableauCanvas[3][3][4] = 1;
+    let row = y / 51 - 1;
+    let col = x / 51 - 1
+
+     tableauCanvas [row][col] = 1;
+
+    console.log(tableauCanvas);
+    // tableauCanvas[1][2] = 1;
+    // tableauCanvas[1][3] = 1;
+    // tableauCanvas[2][2][3][4] = 1;
+    // tableauCanvas[3][3][4] = 1;
 }
 
 function rightClick(event) {
@@ -134,15 +140,19 @@ function rightClick(event) {
         ctx.fillRect(x, y, 50, 50);
 
     }
+    let row = y / 51 - 1;
+    let col = x / 51 - 1;
+    
+    tableauCanvas [row][col] = 0;
+    console.log(tableauCanvas);
 }
 
 function juste() {
-    var clic = tableauCanvas;
-    if (clic = 1) {
-        alert("Victoire");
-    } else {
-        alert("Perdu");
-    }
+   if(tableauCanvas.join() == tabl){
+       alert("C'est gagné");
+   }else{
+       alert("dommage c'est perdu");
+   }
 }
 
 
