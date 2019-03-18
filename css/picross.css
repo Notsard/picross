@@ -9,6 +9,7 @@ canvas {
     background-color:darkblue;
     display: block;
     text-align: center;
+    margin-top: 5%;
   }
 
 .bandeau  {
@@ -21,11 +22,3 @@ canvas {
   bottom: 0;
   width: 100%;
  }
-.button{
-  border-radius:12px 0 12px 0;
-	background: #478bf9;
-	border:none;
-	color:#fff;
-	font:bold 12px Verdana;
-	padding:6px 0 6px 0;
-}

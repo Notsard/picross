@@ -150,7 +150,6 @@ function juste() {
        alert("dommage c'est perdu");
    }
 }
-nvas [row][col] = 0;
 
 function rowText(ctx) {
     for (var i = 0; i < 5; i++) {
@@ -173,7 +172,7 @@ function colText(ctx) {
 }
 
 
-document.oncontextmenu = new Function("return false");nvas [row][col] = 0;
+document.oncontextmenu = new Function("return false");
 
 window.addEventListener('load', function () {
     //
