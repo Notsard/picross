@@ -9,8 +9,11 @@ canvas {
     background-color:darkblue;
     display: block;
     text-align: center;
+<<<<<<< Updated upstream
     margin-top: 5%;
     margin-left: 30%;
+=======
+>>>>>>> Stashed changes
   }
 
 .bandeau  {
@@ -24,9 +27,20 @@ canvas {
   width: 100%;
  }
 
+button {
+  display: block;
+float: left;
+}
+
  .rules {
    float: right;
+<<<<<<< Updated upstream
  }
  .btn{
    margin-left: 40%;
  }
+=======
+   padding-right: 10%;
+ }
+
+>>>>>>> Stashed changes
