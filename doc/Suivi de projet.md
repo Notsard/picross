@@ -1,6 +1,6 @@
 #Projet Picross par Romain et Maxime 
 
-Etape 1: 
+* Etape 1: 
 Intégration du puzzle "titanic" (voir ./doc/nonogram) de façon statique dans un tableau js.
 
 1. Création d'un répertoire Git
@@ -11,8 +11,8 @@ Intégration du puzzle "titanic" (voir ./doc/nonogram) de façon statique dans u
 5. Création fichier picross.js
 6. Déclaration des constantes
 7. Déclaration des fonctions:
-* getCanva(), getContext(), initialisation et disposition d'un tableau avec les fonctions SquaresInit() et SquaresDisplay(), utilisation de boucles for.
 * Fonctions rappellées dans window.addEventListener()
+8. Ajout des règles dans l'html
 
 ### Mise en place des légendes:
 1. Déclaration des fonctions rowText() et colText() et des constantes ROWS, COLUMNS (prisent dans le fichier .json), TEXT_ROW et TEXT_COL.
@@ -30,3 +30,11 @@ Intégration du puzzle "titanic" (voir ./doc/nonogram) de façon statique dans u
 2. Click droit:
 * Suppression du menu contextuel du clic droit
 * Même principe que click gauche sauf que le rappel dans le load se fait avec l'argument "contextmenu" pour que la fonction rightClick soit appellée par un click droit. 
+
+## Mise en place de la deuxième fonctionnalité:
+
+1. Validation:
+* déclaration de deux variables: tabl et tableauCanvas. tabl=tableau solution et tableauCanvas= tableau utilisateur. 
+* déclaration de la fonction juste(), utilisation de if else et de .join (pour transformer le tableau en chaîne de caractères). Si tableaux identiques: c'est gagné, sinon, c'est perdu.
+
+
