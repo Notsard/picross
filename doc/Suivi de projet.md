@@ -1,4 +1,4 @@
-#Projet Picross par Romain et Maxime 
+# Projet Picross par Romain et Maxime 
 
 * Etape 1: 
 Intégration du puzzle "titanic" (voir ./doc/nonogram) de façon statique dans un tableau js.
