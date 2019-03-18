@@ -22,3 +22,7 @@ canvas {
   bottom: 0;
   width: 100%;
  }
+
+ .rules {
+   float: right;
+ }
