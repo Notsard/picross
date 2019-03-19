@@ -1,46 +1,37 @@
-
-
 h1, p {
-color: aliceblue;
+  color: aliceblue;
 }
 
 canvas {
-    border:2px solid #999;
-    background-color:darkblue;
-    display: block;
-    text-align: center;
-<<<<<<< Updated upstream
-    margin-top: 5%;
-    margin-left: 30%;
-=======
->>>>>>> Stashed changes
-  }
-
-.bandeau  {
-    background-color: #4682B4;
-    
+  border: 2px solid #999;
+  background-color: darkblue;
+  display: block;
+  text-align: center;
+  margin: auto auto;
 }
- footer {
-  background-color: #4682B4;
+
+.bandeau {
+  background-color: black;
+}
+
+footer {
+  background-color: black;
   position: absolute;
   bottom: 0;
   width: 100%;
- }
+}
 
 button {
   display: block;
-float: left;
+  float: left;
 }
 
- .rules {
-   float: right;
-<<<<<<< Updated upstream
- }
- .btn{
-   margin-left: 40%;
- }
-=======
-   padding-right: 10%;
- }
+.rules {
+  float: right;
+}
 
->>>>>>> Stashed changes
+.btn {
+  margin-left: 40%;
+}
+
+/*# sourceMappingURL=picross.css.map */

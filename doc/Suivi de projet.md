@@ -1,4 +1,4 @@
-#Projet Picross par Romain et Maxime 
+# Projet Picross par Romain et Maxime 
 
 * Etape 1: 
 Intégration du puzzle "titanic" (voir ./doc/nonogram) de façon statique dans un tableau js.
@@ -13,6 +13,7 @@ Intégration du puzzle "titanic" (voir ./doc/nonogram) de façon statique dans u
 7. Déclaration des fonctions:
 * Fonctions rappellées dans window.addEventListener()
 8. Ajout des règles dans l'html
+9. Ajout d'une variable sass $changetoblack
 
 ### Mise en place des légendes:
 1. Déclaration des fonctions rowText() et colText() et des constantes ROWS, COLUMNS (prisent dans le fichier .json), TEXT_ROW et TEXT_COL.
